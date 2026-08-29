@@ -70,9 +70,22 @@ img {
 }
 
 .star {
-  color: var(--red);
-  font-size: 1.5rem;
   display: inline-block;
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+}
+
+.section-title .star {
+  width: 18px;
+  height: 18px;
+}
+
+.hero-star {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: top;
 }
 
 .section-title {
@@ -495,8 +508,30 @@ img {
 }
 
 .mountain-card .m-icon {
-  font-size: 1.8rem;
   margin: 10px 0;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  stroke: var(--red);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: inline-block;
+}
+
+.icon-sm {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+}
+
+.icon-lg {
+  width: 34px;
+  height: 34px;
+  stroke-width: 1.6;
 }
 
 .mountain-card .m-image {
@@ -1042,8 +1077,18 @@ img {
 }
 
 .contact-card .c-icon {
-  font-size: 1.8rem;
   margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-card .c-icon .icon {
+  stroke: var(--black);
+  transition: stroke 0.2s ease;
+}
+
+.contact-card:hover .c-icon .icon {
+  stroke: var(--white);
 }
 
 .contact-card .c-title {
