@@ -329,7 +329,7 @@ img {
   max-width: 2550px;
   filter: grayscale(100%);
   border-radius: 2px;
-  transform: translateY(750px);
+  transform: translateY(70px);
 }
 
 #about .col-photo .section-title {
