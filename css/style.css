@@ -112,6 +112,7 @@ img {
 }
 
 /* ===================== NAVBAR ===================== */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -193,14 +194,17 @@ img {
 .nav-toggle.open span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
+
 .nav-toggle.open span:nth-child(2) {
   opacity: 0;
 }
+
 .nav-toggle.open span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
 
 /* ===================== HERO ===================== */
+
 .hero {
   border-left: var(--border-black);
   border-right: var(--border-black);
@@ -210,8 +214,18 @@ img {
   position: relative;
   overflow: hidden;
   background:
-    linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.96)),
-    repeating-linear-gradient(0deg, #eee 0px, #eee 1px, transparent 1px, transparent 40px);
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.9),
+      rgba(255,255,255,0.96)
+    ),
+    repeating-linear-gradient(
+      0deg,
+      #eee 0px,
+      #eee 1px,
+      transparent 1px,
+      transparent 40px
+    );
 }
 
 .hero-inner {
@@ -296,7 +310,8 @@ img {
   font-size: 0.98rem;
 }
 
-/* ===================== GRID SECTIONS (2 col like reference) ===================== */
+/* ===================== GRID SECTIONS ===================== */
+
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -312,24 +327,33 @@ img {
 .two-col > .col:first-child {
   border-right: none;
 }
+
 .two-col > .col:last-child {
   border-left: none;
 }
 
 /* ===================== ABOUT ===================== */
+
 #about .col-photo {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  min-height: 650px;
+  overflow: hidden;
 }
 
 #about .about-photo {
   width: 100%;
-  max-width: 100550px;
+  max-width: 450px;
+  height: auto;
   filter: grayscale(100%);
   border-radius: 2px;
+
+  /* POSISI DESKTOP */
   transform: translateY(65px);
+
+  transition: transform 0.3s ease;
 }
 
 #about .col-photo .section-title {
@@ -337,6 +361,7 @@ img {
   top: 20px;
   left: 32px;
   right: auto;
+  z-index: 2;
 }
 
 .about-name {
@@ -391,7 +416,8 @@ img {
   color: var(--red);
 }
 
-/* ===================== PACKAGES-STYLE LIST (used generically) ===================== */
+/* ===================== LIST ===================== */
+
 .list-block h4 {
   font-family: var(--font-display);
   font-size: 0.95rem;
@@ -421,7 +447,8 @@ img {
   white-space: nowrap;
 }
 
-/* ===================== SERVICES / EXPERIENCE ROWS ===================== */
+/* ===================== SERVICES / EXPERIENCE ===================== */
+
 .service-row {
   display: flex;
   gap: 16px;
@@ -453,6 +480,7 @@ img {
 }
 
 /* ===================== MOUNTAIN JOURNEY ===================== */
+
 #mountains {
   border-left: var(--border-black);
   border-right: var(--border-black);
@@ -570,6 +598,7 @@ img {
 }
 
 /* ===================== PROJECTS ===================== */
+
 #projects {
   border-left: var(--border-black);
   border-right: var(--border-black);
@@ -654,6 +683,7 @@ img {
 }
 
 /* ===================== SCHOOL ===================== */
+
 #school {
   border-left: var(--border-black);
   border-right: var(--border-black);
@@ -723,6 +753,7 @@ img {
 }
 
 /* ===================== JOURNEY / TIMELINE ===================== */
+
 #journey {
   border-left: var(--border-black);
   border-right: var(--border-black);
@@ -823,6 +854,7 @@ img {
 }
 
 /* ===================== TECHNOLOGY ===================== */
+
 #technology {
   border-left: var(--border-black);
   border-right: var(--border-black);
@@ -872,6 +904,7 @@ img {
 }
 
 /* ===================== STATISTICS ===================== */
+
 #statistics {
   border-left: var(--border-black);
   border-right: var(--border-black);
@@ -906,6 +939,7 @@ img {
 }
 
 /* ===================== TECH x ADVENTURE ===================== */
+
 #tech-adventure {
   border-left: var(--border-black);
   border-right: var(--border-black);
@@ -960,6 +994,7 @@ img {
 /* ===================== GALLERY ===================== */
 
 /* ===================== PHILOSOPHY ===================== */
+
 #philosophy {
   border-left: var(--border-black);
   border-right: var(--border-black);
@@ -987,6 +1022,7 @@ img {
 }
 
 /* ===================== CONTACT ===================== */
+
 #contact {
   border-left: var(--border-black);
   border-right: var(--border-black);
@@ -1050,6 +1086,7 @@ img {
 }
 
 /* ===================== FOOTER ===================== */
+
 .footer {
   border-left: var(--border-black);
   border-right: var(--border-black);
@@ -1099,10 +1136,13 @@ img {
 }
 
 /* ===================== SCROLL REVEAL ===================== */
+
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .reveal.active {
@@ -1110,8 +1150,12 @@ img {
   transform: translateY(0);
 }
 
-/* ===================== RESPONSIVE ===================== */
+/* ===================================================
+   RESPONSIVE
+   =================================================== */
+
 @media (max-width: 900px) {
+
   .two-col,
   .school-wrap,
   .ta-grid {
@@ -1121,6 +1165,27 @@ img {
   .two-col > .col {
     border-right: var(--border-black) !important;
     border-left: var(--border-black) !important;
+  }
+
+  /* ===================== ABOUT TABLET ===================== */
+
+  #about .col-photo {
+    min-height: auto;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    overflow: hidden;
+  }
+
+  #about .about-photo {
+    max-width: 450px;
+
+    /* HAPUS EFEK TURUN DESKTOP */
+    transform: translateY(0);
+  }
+
+  #about .col-photo .section-title {
+    top: 20px;
+    left: 32px;
   }
 
   .mountain-grid {
@@ -1158,7 +1223,18 @@ img {
   }
 }
 
+/* ===================================================
+   MOBILE
+   =================================================== */
+
 @media (max-width: 640px) {
+
+  .container {
+    padding: 0 18px;
+  }
+
+  /* ===================== NAVBAR ===================== */
+
   .nav-menu {
     position: fixed;
     top: 0;
@@ -1182,9 +1258,75 @@ img {
     display: flex;
   }
 
+  /* ===================== ABOUT MOBILE ===================== */
+
+  #about .col-photo {
+    min-height: 0;
+
+    /*
+      Memberikan ruang untuk judul
+      kemudian foto tetap berada di area
+      yang mudah dikontrol.
+    */
+    padding: 90px 20px 20px;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: visible;
+  }
+
+  #about .col-photo .section-title {
+    top: 20px;
+    left: 20px;
+  }
+
+  #about .about-photo {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+
+    /*
+      FOTO NAIK SEDIKIT DI MOBILE
+    */
+    transform: translateY(-30px);
+  }
+
+  /* ===================== ABOUT CONTENT ===================== */
+
+  #about .col:not(.col-photo) {
+    padding: 32px 22px;
+  }
+
+  .about-name {
+    font-size: 1.8rem;
+    line-height: 1.15;
+  }
+
+  .about-text {
+    font-size: 0.9rem;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .about-stat {
+    padding: 11px;
+  }
+
+  .about-stat .value {
+    font-size: 0.95rem;
+  }
+
+  /* ===================== MOUNTAINS ===================== */
+
   .mountain-grid {
     grid-template-columns: 1fr;
   }
+
+  /* ===================== PROJECTS ===================== */
 
   .project-card {
     grid-template-columns: 50px 1fr;
@@ -1196,9 +1338,13 @@ img {
     margin-top: 12px;
   }
 
+  /* ===================== STATISTICS ===================== */
+
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* ===================== GALLERY ===================== */
 
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1210,7 +1356,76 @@ img {
     grid-row: span 1;
   }
 
+  /* ===================== CONTACT ===================== */
+
   .contact-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  /* ===================== TIMELINE ===================== */
+
+  .timeline {
+    padding: 0 16px;
+  }
+
+  .timeline-item {
+    gap: 12px;
+  }
+
+  .timeline-item .t-year span {
+    width: 50px;
+    height: 50px;
+    font-size: 0.75rem;
+  }
+
+  .timeline-item .t-content {
+    padding: 16px;
+  }
+
+  /* ===================== TECH ADVENTURE ===================== */
+
+  .ta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ta-col:first-child {
+    border-right: none;
+    border-bottom: 2px solid var(--black);
+  }
+
+}
+
+/* ===================================================
+   EXTRA SMALL MOBILE
+   =================================================== */
+
+@media (max-width: 400px) {
+
+  #about .col-photo {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 85px;
+  }
+
+  #about .about-photo {
+    max-width: 290px;
+    transform: translateY(-25px);
+  }
+
+  #about .col-photo .section-title {
+    left: 15px;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
 }
