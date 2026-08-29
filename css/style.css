@@ -257,12 +257,6 @@ img {
   width: 70%;
 }
 
-.hero-photo-wrap img {
-  width: 100%;
-  border-radius: 4px;
-  filter: grayscale(100%) contrast(1.05);
-}
-
 .hero-tags-row {
   display: flex;
   align-items: center;
