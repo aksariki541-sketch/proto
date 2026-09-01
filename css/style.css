@@ -122,6 +122,46 @@ img {
   font-weight: 600;
 }
 
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 0 24px;
+}
+
+.section-header .subtitle {
+  color: var(--gray);
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.section-header.centered .section-title {
+  justify-content: center;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  stroke: var(--red);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: inline-block;
+}
+
+.icon-sm {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+}
+
+.icon-lg {
+  width: 34px;
+  height: 34px;
+  stroke-width: 1.6;
+}
+
 /* ===================================================
    NAVBAR
    =================================================== */
@@ -616,176 +656,6 @@ img {
 }
 
 /* ===================================================
-   MOUNTAINS
-   =================================================== */
-
-#mountains {
-  border-left: var(--border-black);
-  border-right: var(--border-black);
-  border-bottom: var(--border-black);
-
-  padding: 60px 0;
-}
-
-.section-header {
-  text-align: center;
-
-  margin-bottom: 40px;
-
-  padding: 0 24px;
-}
-
-.section-header .subtitle {
-  color: var(--gray);
-
-  margin-top: 10px;
-
-  font-size: 1rem;
-}
-
-.section-header.centered .section-title {
-  justify-content: center;
-}
-
-.mountain-grid {
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 0;
-
-  border-top: var(--border-black);
-}
-
-.mountain-card {
-  border-right: 2px solid var(--black);
-  border-bottom: 2px solid var(--black);
-
-  padding: 24px;
-
-  position: relative;
-
-  background: var(--gray-light);
-
-  transition: background 0.25s ease;
-}
-
-.mountain-card:hover {
-  background: var(--white);
-}
-
-.mountain-card .m-number {
-  font-family: var(--font-display);
-
-  font-size: 0.8rem;
-
-  color: var(--red);
-}
-
-.mountain-card .m-icon {
-  margin: 10px 0;
-}
-
-.icon {
-  width: 28px;
-  height: 28px;
-
-  stroke: var(--red);
-
-  fill: none;
-
-  stroke-width: 1.8;
-
-  stroke-linecap: round;
-  stroke-linejoin: round;
-
-  display: inline-block;
-}
-
-.icon-sm {
-  width: 18px;
-  height: 18px;
-
-  stroke-width: 2;
-}
-
-.icon-lg {
-  width: 34px;
-  height: 34px;
-
-  stroke-width: 1.6;
-}
-
-/* ===================== MOUNTAIN IMAGE ===================== */
-
-.mountain-card .m-image {
-  width: 100%;
-
-  aspect-ratio: 4 / 3;
-
-  object-fit: cover;
-
-  /*
-   * Fokus sedikit ke bagian bawah.
-   * Membantu plakat/objek bagian atas
-   * tidak terlalu terpotong.
-   */
-  object-position: center 60%;
-
-  filter: grayscale(100%);
-
-  border-radius: 3px;
-
-  margin-bottom: 12px;
-
-  background: #ddd;
-}
-
-.mountain-card .m-name {
-  font-family: var(--font-display);
-
-  font-size: 1.05rem;
-
-  text-transform: uppercase;
-
-  color: var(--black);
-}
-
-.mountain-card .m-elev {
-  color: var(--red);
-
-  font-weight: 700;
-
-  font-size: 0.95rem;
-
-  margin-top: 4px;
-}
-
-.elev-bar {
-  width: 100%;
-
-  height: 6px;
-
-  background: #ddd;
-
-  border-radius: 3px;
-
-  margin-top: 10px;
-
-  overflow: hidden;
-}
-
-.elev-bar-fill {
-  height: 100%;
-
-  background: var(--red);
-
-  width: 0%;
-
-  transition: width 1.2s ease;
-}
-
-/* ===================================================
    PROJECTS
    =================================================== */
 
@@ -907,104 +777,6 @@ img {
 
 .p-visit:hover {
   background: var(--black);
-}
-
-/* ===================================================
-   SCHOOL
-   =================================================== */
-
-#school {
-  border-left: var(--border-black);
-  border-right: var(--border-black);
-  border-bottom: var(--border-black);
-
-  padding: 60px 24px;
-}
-
-.school-wrap {
-  max-width: var(--max-width);
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 50px;
-
-  align-items: start;
-}
-
-.school-info-table {
-  width: 100%;
-
-  border-collapse: collapse;
-
-  margin-top: 20px;
-}
-
-.school-info-table tr {
-  border-bottom: 1px dashed #ddd;
-}
-
-.school-info-table td {
-  padding: 10px 4px;
-
-  font-size: 0.9rem;
-}
-
-.school-info-table td:first-child {
-  font-weight: 600;
-
-  color: var(--gray);
-
-  width: 40%;
-}
-
-.school-info-table td:last-child {
-  font-weight: 600;
-
-  color: var(--black);
-
-  text-align: right;
-}
-
-.school-desc {
-  color: var(--gray);
-
-  margin-top: 16px;
-
-  font-size: 0.95rem;
-}
-
-.school-btn {
-  display: inline-block;
-
-  margin-top: 24px;
-
-  font-family: var(--font-display);
-
-  font-size: 0.8rem;
-
-  text-transform: uppercase;
-
-  background: var(--black);
-
-  color: var(--white);
-
-  padding: 14px 26px;
-
-  border-radius: 3px;
-
-  border: 2px solid var(--black);
-
-  transition: all 0.2s ease;
-}
-
-.school-btn:hover {
-  background: var(--red);
-
-  border-color: var(--red);
 }
 
 /* ===================================================
@@ -1253,7 +1025,7 @@ img {
 
   display: grid;
 
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 
   gap: 20px;
 
@@ -1280,78 +1052,6 @@ img {
   letter-spacing: 1px;
 
   color: #ccc;
-}
-
-/* ===================================================
-   TECH x ADVENTURE
-   =================================================== */
-
-#tech-adventure {
-  border-left: var(--border-black);
-  border-right: var(--border-black);
-  border-bottom: var(--border-black);
-
-  padding: 60px 24px;
-}
-
-.ta-wrap {
-  max-width: var(--max-width);
-
-  margin: 0 auto;
-}
-
-.ta-grid {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 0;
-
-  border: 2px solid var(--black);
-
-  margin-top: 30px;
-}
-
-.ta-col {
-  padding: 30px;
-}
-
-.ta-col:first-child {
-  border-right: 2px solid var(--black);
-}
-
-.ta-col h4 {
-  font-family: var(--font-display);
-
-  text-transform: uppercase;
-
-  color: var(--red);
-
-  margin-bottom: 16px;
-
-  font-size: 1.1rem;
-}
-
-.ta-col ul li {
-  padding: 8px 0;
-
-  border-bottom: 1px dashed #ddd;
-
-  font-weight: 600;
-
-  font-size: 0.92rem;
-}
-
-.ta-quote {
-  text-align: center;
-
-  font-family: var(--font-script);
-
-  color: var(--red);
-
-  font-size: clamp(1.3rem, 3vw, 1.8rem);
-
-  margin-top: 30px;
 }
 
 /* ===================================================
@@ -1588,9 +1288,7 @@ img {
 
   /* ===================== GRID ===================== */
 
-  .two-col,
-  .school-wrap,
-  .ta-grid {
+  .two-col {
     grid-template-columns: 1fr;
   }
 
@@ -1630,16 +1328,6 @@ img {
   #about .col-photo .section-title {
     top: 20px;
     left: 32px;
-  }
-
-  /* ===================== MOUNTAINS ===================== */
-
-  .mountain-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .mountain-card .m-image {
-    object-position: center 60%;
   }
 
   /* ===================== STATS ===================== */
@@ -1791,25 +1479,6 @@ img {
     font-size: 0.95rem;
   }
 
-  /* ===================== MOUNTAINS ===================== */
-
-  .mountain-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .mountain-card .m-image {
-    width: 100%;
-
-    aspect-ratio: 4 / 3;
-
-    object-fit: cover;
-
-    /*
-     * Posisi gambar sedikit diturunkan.
-     */
-    object-position: center 65%;
-  }
-
   /* ===================== PROJECT ===================== */
 
   .project-card {
@@ -1871,18 +1540,6 @@ img {
   .timeline-item .t-content {
     padding: 16px;
   }
-
-  /* ===================== TECH ADVENTURE ===================== */
-
-  .ta-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .ta-col:first-child {
-    border-right: none;
-
-    border-bottom: 2px solid var(--black);
-  }
 }
 
 /* ===================================================
@@ -1909,12 +1566,6 @@ img {
 
   #about .col-photo .section-title {
     left: 15px;
-  }
-
-  /* ===================== MOUNTAIN ===================== */
-
-  .mountain-card .m-image {
-    object-position: center 65%;
   }
 
   /* ===================== STATS ===================== */

@@ -70,21 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   counters.forEach(el => counterObserver.observe(el));
 
-  /* ---------- ELEVATION BAR ANIMATION (Mountain Journey) ---------- */
-  const elevBars = document.querySelectorAll('.elev-bar-fill');
-
-  const elevObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const fillPercent = entry.target.getAttribute('data-fill');
-        entry.target.style.width = fillPercent + '%';
-        elevObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  elevBars.forEach(el => elevObserver.observe(el));
-
   /* ---------- NAVBAR ACTIVE LINK ON SCROLL ---------- */
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-menu a');
